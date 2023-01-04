@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: url('img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#container{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 40px;
+}
+
+header h1{
+    font-size: 2.3rem;
+    margin: 15px 0px;
+}
+
+#menu{
+    background-color: azure;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 12px 40px;
+    margin: 20px;
+}
+
+#menu h3{
+    font-size: 1.3rem;
+}
+
+#hide-show{
+    float: right;
+}
+
+#btn{
+    font-size: 1.1rem;
+    width: 80px;
+    padding: 3px;
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+#hide-content ul div a{
+    text-decoration: none;
+    color: black;
+}
+
+#hide-content ul div a:hover{
+    text-decoration: underline;
+}
+
+#hide-content ul div a li{
+    list-style: decimal;
+    padding: 2px;
+}
+
+#content{
+    text-align: center;
+}
+
+.box{
+    width: 100%;
+}
+
+.box h3{
+    font-size: 1.5rem;
+    margin: 12px;
+}
+
+.box img{
+    width: 400px;
+    margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 960px){
+    .box img{
+        width: 250px;
+        margin-bottom: 20px;
+    }    
+}
+
+@media only screen and (max-width: 355px){
+    .box img{
+        width: 150px;
+        margin-bottom: 16px;
+    }    
+}
