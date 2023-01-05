@@ -40,9 +40,6 @@ const searchFun=()=>{
         if (a > -1) {
             window.location.href = '#'+attri;
         }
-        else    {
-            alert("Station Form Not Found");
-        }
     }
 }
 
