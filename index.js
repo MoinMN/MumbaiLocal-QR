@@ -3,7 +3,7 @@ url.search = '';
 
 const result = url.toString();
 
-if(window.location.href != result || window.location.href != "http://127.0.0.1:5500/MumbaiLocal/index.html"){
+if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
     window.location.href = result
 }
 
