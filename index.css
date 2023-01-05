@@ -41,6 +41,7 @@ form button {
     background-color: gray;
     border: 2px solid black;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 form button i {
