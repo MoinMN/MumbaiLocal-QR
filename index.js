@@ -3,9 +3,11 @@ url.search = '';
 
 const result = url.toString();
 
-if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
-    window.location.href = result
-}
+// if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
+//     window.location.href = result;
+// }
+
+window.location.href = result;
 
 let btn = document.getElementById('btn');
 let hide_content = document.getElementById('hide-content');
