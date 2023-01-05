@@ -62,6 +62,6 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
   setTimeout(() => {
-      window.location.href = "http://127.0.0.1:5500/MumbaiLocal/index.html";
+      window.location.href = "https://moinmn.github.io/MumbaiLocal-QR/";
   }, 1000);
 }
