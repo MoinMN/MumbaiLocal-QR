@@ -1,5 +1,35 @@
 let btn = document.getElementById('btn');
 let hide_content = document.getElementById('hide-content');
+
+
+let railway = document.getElementsByName('railway');
+
+for (let i = 0; i < railway.length; i++) {
+    railway[i].addEventListener('input', ()=>{
+        console.log(railway[i])
+        if (railway[i].value=='harbour'){
+            document.getElementById('harbour').style.display = 'block';
+            document.getElementById('central').style.display = 'none';
+            document.getElementById('western').style.display = 'none';
+            console.log(railway[i])
+        }
+        if (railway[i].value=='central'){
+            document.getElementById('harbour').style.display = 'none';
+            document.getElementById('central').style.display = 'block';
+            document.getElementById('western').style.display = 'none';
+            console.log(railway[i])
+        }
+        if (railway[i].value=='western'){
+            document.getElementById('harbour').style.display = 'none';
+            document.getElementById('central').style.display = 'none';
+            document.getElementById('western').style.display = 'block';
+            console.log(railway[i])
+        }
+        console.log(railway[i])
+    });
+}
+
+
 function show_hide(){
     if(hide_content.style.display == 'none'){
         hide_content.style.display = 'block';
@@ -39,9 +69,9 @@ url.search = '';
 
 const result = url.toString();
 
-if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
-    window.location.href = result;
-}
+// if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
+//     window.location.href = result;
+// }
 
 // Get the button
 let mybutton = document.getElementById("myBtn");
@@ -61,7 +91,7 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  setTimeout(() => {
-      window.location.href = "https://moinmn.github.io/MumbaiLocal-QR/";
-  }, 1000);
 }
+
+
+
