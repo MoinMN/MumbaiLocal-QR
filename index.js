@@ -57,6 +57,7 @@ const searchFun=()=>{
     }
 
     if (count == 0){
+        
         alert("Station Name Not Found.");
     }
 }
@@ -66,9 +67,9 @@ url.search = '';
 
 const result = url.toString();
 
-// if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
-//     window.location.href = result;
-// }
+if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
+    window.location.href = result;
+}
 
 // Get the button
 let mybutton = document.getElementById("myBtn");
