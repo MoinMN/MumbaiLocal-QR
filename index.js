@@ -67,7 +67,6 @@ const searchFun=()=>{
     }
 
     if (count == 0){
-        window.location.href = "#";
         alert("Station Name Not Found.");
     }
 }
