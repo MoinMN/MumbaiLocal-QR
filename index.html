@@ -22,24 +22,29 @@
 
         <form id="search-box">
             <input type="search" name="search" id="search" placeholder="Search Station Name">
-            <button onclick="searchFun()" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            <button onclick="searchFun()" type="submit"><i class="fa-solid fa-magnifying-glass"></i> <span>Search</span></button>
         </form>
 
         <div id="menu">
-            <h3>Table of Contents</h3><br>
-            <div id="hide-show">
-                <button onclick=show_hide() id="btn">Show</button>
+            <div id="in-head">
+                <h3>Table of Contents</h3><br>
+                <div id="hide-show">
+                    <button onclick=show_hide() id="btn">Hide</button>
+                </div>
             </div>
             <div id="hide-content">
                 <div class="choice">
                     <div class="choice-box">
-                        <input type="radio" name="railway" value="harbour" id="harbour-r"><label for="harbour">Harbour Line</label>
+                        <input type="radio" name="railway" value="harbour" id="harbour-r">
+                        <label for="harbour-r">Harbour Line</label>
                     </div>
                     <div class="choice-box">
-                        <input type="radio" name="railway" value="central" id="central-r"><label for="central">Central Line</label>
+                        <input type="radio" name="railway" value="central" id="central-r">
+                        <label for="central-r">Central Line</label>
                     </div>
                     <div class="choice-box">
-                        <input type="radio" name="railway" value="western" id="western-r"><label for="western">Western Line</label>
+                        <input type="radio" name="railway" value="western" id="western-r">
+                        <label for="western-r">Western Line</label>
                     </div>
                 </div>
                     
@@ -1038,7 +1043,7 @@
             <hr>
             <div class="box">
                 <h3 id="Ambivli">QR code for Ambivli</h3>
-                <img src="QR-CODE/UNAVAILABLE.jpg" alt="404">
+                <img src="QR-CODE/AMBIVLI.jpg" alt="404">
             </div>
             <hr>
             <div class="box">

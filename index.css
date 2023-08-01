@@ -50,15 +50,15 @@ header h1{
     font-size: 18px;
 }
 
-form button {
+#search-box button {
     background-color: gray;
     border: 2px solid black;
     border-radius: 12px;
     cursor: pointer;
-    width: 110px;
+    width: 120px;
 }
 
-form button i {
+#search-box button i {
     color: white;
     font-size: 1.1rem;
     padding: 10px 4px;
@@ -71,15 +71,23 @@ form button i {
     border-radius: 15px;
     padding: 12px 40px;
     margin: 20px 2px;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+#in-head{
+    display: flex;
+    justify-content: space-around;
 }
 
 #menu h3{
     font-size: 1.3rem;
 }
 
-#hide-show{
+/* #hide-show{
     float: right;
-}
+} */
 
 #btn{
     font-size: 1.1rem;
@@ -100,10 +108,6 @@ form button i {
 .choice-box{
     margin: 2px;
     width: 240px;
-}
-
-.choice-box label{
-    padding: 3px;
 }
 
 .choice-box input{
@@ -171,6 +175,17 @@ form button i {
     background-color: #555;
   }
 
+@media only screen and (max-width: 1100px){
+    #search-box button{
+        width: 40px;
+    }
+
+    #search-box button span{
+        display: none;
+    }
+}
+
+
 @media only screen and (max-width: 750px){
     body{
         background: none;
@@ -188,7 +203,7 @@ form button i {
 
     #search{
         height: 36px;
-        width: 300px; 
+        width: 290px; 
     }
 
     form button i {
@@ -218,6 +233,10 @@ form button i {
     form button i {
         padding: 5px;
     }
+
+    #menu{
+        width: 250px;
+    }
 }
 
 @media only screen and (max-width: 355px){
@@ -225,9 +244,13 @@ form button i {
         font-size: 1.8rem;
     }
 
+    #menu{
+        width: 200px;
+    }
+
     #search{
         height: 32px;
-        width: 220px; 
+        width: 200px; 
     }
 
     form button i {

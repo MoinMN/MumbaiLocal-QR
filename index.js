@@ -6,26 +6,21 @@ let railway = document.getElementsByName('railway');
 
 for (let i = 0; i < railway.length; i++) {
     railway[i].addEventListener('input', ()=>{
-        console.log(railway[i])
         if (railway[i].value=='harbour'){
             document.getElementById('harbour').style.display = 'block';
             document.getElementById('central').style.display = 'none';
             document.getElementById('western').style.display = 'none';
-            console.log(railway[i])
         }
         if (railway[i].value=='central'){
             document.getElementById('harbour').style.display = 'none';
             document.getElementById('central').style.display = 'block';
             document.getElementById('western').style.display = 'none';
-            console.log(railway[i])
         }
         if (railway[i].value=='western'){
             document.getElementById('harbour').style.display = 'none';
             document.getElementById('central').style.display = 'none';
             document.getElementById('western').style.display = 'block';
-            console.log(railway[i])
         }
-        console.log(railway[i])
     });
 }
 
@@ -44,7 +39,7 @@ function show_hide(){
 
 const searchFun=()=>{
     let search = document.getElementById('search').value.toUpperCase();
-    // console.log(search);
+    let count = 0
 
     let content = document.getElementById('content');
     let station = content.getElementsByTagName('h3');
@@ -52,15 +47,17 @@ const searchFun=()=>{
     for(var i=0; i<station.length; i++) {
         let ss = station[i].innerHTML.toUpperCase();
 
-        // console.log(ss.slice(11));
-        // console.log(station[1].getAttribute('id'));
-
         let a = ss.indexOf(search);
         let attri = station[i].getAttribute('id');
         
         if (a > -1) {
+            count = 1
             window.location.href = '#'+attri;
         }
+    }
+
+    if (count == 0){
+        alert("Station Name Not Found.");
     }
 }
 
