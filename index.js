@@ -25,6 +25,16 @@ for (let i = 0; i < railway.length; i++) {
 }
 
 
+let url = new URL(window.location.href);
+url.search = '';
+
+const result = url.toString();
+
+if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
+    window.location.href = result;
+}
+
+
 function show_hide(){
     if(hide_content.style.display == 'none'){
         hide_content.style.display = 'block';
@@ -57,18 +67,9 @@ const searchFun=()=>{
     }
 
     if (count == 0){
-        
+        window.location.href = "#";
         alert("Station Name Not Found.");
     }
-}
-
-let url = new URL(window.location.href);
-url.search = '';
-
-const result = url.toString();
-
-if(window.location.href != result || window.location.href != "https://moinmn.github.io/MumbaiLocal-QR/"){
-    window.location.href = result;
 }
 
 // Get the button
