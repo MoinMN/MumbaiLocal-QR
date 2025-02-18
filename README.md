@@ -4,8 +4,8 @@ MumbaiLocal-QR is a **MERN stack-based** web application that provides QR codes 
 
 ## **🚀 Live Demo**  
 
-- **Frontend (React.js, Vite, Tailwind CSS)**: [MumbaiLocal-QR Frontend](https://mumbai-local-qr.vercel.app)  
-- **Backend (Node.js, Express.js, MongoDB)**: [MumbaiLocal-QR Backend](https://mumbai-local-qr-api.vercel.app)  
+- **Frontend (React.js, Vite, Tailwind CSS)**: [MumbaiLocal-QR Frontend](https://mumbailocal-qr.vercel.app)  
+- **Backend (Node.js, Express.js, MongoDB)**: [MumbaiLocal-QR Backend](https://mumbailocal-qr-api.vercel.app)  
 
 ---
 
@@ -114,14 +114,14 @@ npm run dev
 cd client
 vercel deploy --prod
 ```
-👉 **Live:** [MumbaiLocal-QR Frontend](https://mumbai-local-qr.vercel.app)  
+👉 **Live:** [MumbaiLocal-QR Frontend](https://mumbailocal-qr.vercel.app)  
 
 ### **🚀 Deploy Backend to Vercel**  
 ```sh
 cd server
 vercel deploy --prod
 ```
-👉 **Live:** [MumbaiLocal-QR Backend](https://mumbai-local-qr-api.vercel.app)  
+👉 **Live:** [MumbaiLocal-QR Backend](https://mumbailocal-qr-api.vercel.app)  
 
 ---
 
