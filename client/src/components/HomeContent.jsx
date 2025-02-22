@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { FaSearch } from "react-icons/fa";
 import TableContent from './TableContent';
 import QRCard from './QRCard';
+import Loading from './Loading';
 
 const HomeContent = () => {
   // track input radio
   const [selectedLine, setSelectedLine] = useState('Harbour');
   const [qrcodes, setQrcodes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchQRCodes = async () => {
     try {
@@ -15,11 +17,15 @@ const HomeContent = () => {
       if (response.ok) setQrcodes(data.qrcodes);
     } catch (error) {
       console.log('Error while fetching qr codes\nError: ', error);
+    } finally {
+      setIsLoading(false);
     }
   }
 
   const handleSearch = async (e, searchText) => {
     if (e) e.preventDefault();
+
+    setIsLoading(true);
 
     try {
       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/qr/get?searchText=${searchText}`, { method: "GET" });
@@ -27,6 +33,8 @@ const HomeContent = () => {
       if (response.ok) setQrcodes(data.qrcodes);
     } catch (error) {
       console.log('Error while searching qr codes\nError: ', error);
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -68,15 +76,20 @@ const HomeContent = () => {
         fetchQRCodes={handleSearch}
       />
 
-      {qrcodes.length === 0
+      {isLoading
         ?
-        <h3 className="montserrat_alternates font-semibold text-center text-xl md:text-3xl">
-          Not Found!
-        </h3>
-        :
-        <QRCard
-          qrcodes={qrcodes}
-        />
+        <div className="flex justify-center">
+          <Loading />
+        </div>
+        : qrcodes.length === 0
+          ?
+          <h3 className="montserrat_alternates font-semibold text-center text-xl md:text-3xl">
+            Not Found!
+          </h3>
+          :
+          <QRCard
+            qrcodes={qrcodes}
+          />
       }
     </div>
   )

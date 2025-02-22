@@ -48,7 +48,10 @@ const Login = () => {
   return (
     <>
       {isLoading
-        ? <Loading />
+        ?
+        <div className="flex justify-center items-center h-screen">
+          <Loading />
+        </div>
         :
         <div className='bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90% min-h-screen flex flex-col justify-center items-center text-base max-sm:text-sm px-6'>
           {errorMsg &&
