@@ -7,6 +7,15 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    sitemap({
+      hostname: 'https://mumbailocal-qr.vercel.app',
+      outDir: 'dist',
+      urls: [
+        { url: '/', changefreq: 'weekly', priority: 1.0 },
+        { url: '/post', changefreq: 'monthly', priority: 0.8 },
+        { url: '/admin', changefreq: 'monthly', priority: 0.6 },
+      ],
+    })
   ],
   base: "/"
 })
