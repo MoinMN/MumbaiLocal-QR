@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800&family=Playwrite+IN:wght@100..400&family=Roboto:wght@100..900&display=swap");
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* ============== GOOGLE FONT ============== */
+.roboto_font {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.montserrat_alternates {
+  font-family: "Montserrat Alternates", serif;
+  font-style: normal;
+}
+
+.playwrite_in {
+  font-family: "Playwrite IN", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* ============== GOOGLE FONT ============== */
